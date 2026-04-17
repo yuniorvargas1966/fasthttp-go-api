@@ -45,7 +45,7 @@ func initDB() {
 	dsn := os.Getenv("Usuario") + ":" +
 		os.Getenv("Contrasena") +
 		"@tcp(" + os.Getenv("Host") + os.Getenv(":Puerto") + os.Getenv("DBPort") + ")/" +
-		os.Getenv("Nombre") + "?parseTime=true"
+		os.Getenv("Nombre") + "?parseTime=false"
 
 	var err error
 	db, err = sql.Open("mysql", dsn)
