@@ -257,7 +257,7 @@ func main() {
         router.DELETE("/servicios/:id", eliminarServicio)
 
         log.Println("Servidor en http://localhost" + port + "/servicios")
-        log.Fatal(fasthttp.ListenAndServe("82.180.133.28"+port, func(ctx *fasthttp.RequestCtx) {
+        log.Fatal(fasthttp.ListenAndServe("0.0.0.0"+port, func(ctx *fasthttp.RequestCtx) {
                 enableCORS(ctx)
                 router.Handler(ctx)
         }))
